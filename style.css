@@ -144,19 +144,26 @@ header #search-bar{
 ---------------------- */
 
 .iframe-container{
-    width:1280px;
-    height: 720px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; 
 }
 
 .iframe-container iframe{
-    border-style: none;
-    width:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
     height: 100%;
+    border-style: none;
 }
 
 #content{
     padding:24px 24px 0px 0px;
-    width: 75%;
+    width: 70%;
     display:flex;
     flex-direction: column;
     color:white;
@@ -180,7 +187,7 @@ header #search-bar{
 #video-info{
     padding-top: 20px;
     padding-bottom:8px;
-    border-bottom: 1px solid #797979;
+    border-bottom: 1px solid #2a2a2a;
 }
 
 #video-info .views{
@@ -188,4 +195,61 @@ header #search-bar{
     margin:10px 0px;
     color:#797979;
     font-size: medium;
+}
+
+
+
+/* ----------------------
+          Description
+---------------------- */
+#description-subscribe{
+    width: 100%;
+    display:grid;
+    grid-template-columns: 4% 46% 35% 15%;
+    position: relative;
+}
+
+#description-subscribe a img{
+    grid-column: 1/2;
+    margin: 20px 0px;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#description-subscribe #description{
+    grid-column: 2/3;
+    margin-top: 20px;
+    margin-left:15px;
+    width: 100%;
+}
+
+#description-subscribe h2{
+    color:white;
+    font-size: large;
+    align-self: center;
+    margin-top:5px;
+}
+
+#description-subscribe span{
+    color:#797979;
+    font-size: medium;
+    align-self: center;
+}
+
+#description-subscribe span{
+    color:#797979;
+    font-size: medium;
+}
+#description-subscribe button{
+    background-color: #cc0000;
+    border-radius:2px;
+    color:white;
+    grid-column: 4/5;
+    border-style:none;
+    height: 40%;
+    width: 80%;
+    align-self: center;
+    position:absolute;
+    right:0px;
+    text-align: center;
 }
